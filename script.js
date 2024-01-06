@@ -123,3 +123,26 @@ function userInput(n) {
 
 userInput(5);
 
+// Задание 10
+// Написать функцию calcPrice, которая рассчитывает и выводит в консоль стоимость аренды авто
+// на кол-во дней, которое приходит в функцию как параметр.
+// День аренды автомобиля стоит $40. При аренде на 7 или больше дней вы получаете общую итоговую
+// скидку $50. Если вы арендуете авто на 3 или более дней, ваша общая скидка составит $20.
+
+const dayPrice = 40;
+function calcPrice(amountOfDays) {
+  if (amountOfDays >= 7) {
+    const price = dayPrice * amountOfDays - 50;
+    console.log(`${price}$`);
+  } else if (amountOfDays >= 3 && amountOfDays < 7) {
+    const price = dayPrice * amountOfDays - 20;
+    console.log(`${price}$`);
+  } else {
+    const price = dayPrice * amountOfDays;
+    console.log(`${price}$`);
+  }
+}
+
+calcPrice(10);
+
+
