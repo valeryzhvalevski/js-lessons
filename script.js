@@ -68,7 +68,7 @@
 // Вывести несколько таких сгенерированных тегов в консоль, затем отправить их на страницу.
 
 // function addTag(name, color, body) {
-//   const tag = document.createElement("name");
+//   const tag = document.createElement(name);
 //   tag.style.color = color;
 //   tag.textContent = body;
 //   document.body.appendChild(tag);
@@ -137,3 +137,156 @@
 //     ulElement.appendChild(liElement);
 //   });
   
+//////////////
+
+// const newParagraph = document.createElement('p');
+// newParagraph.textContent = 'hello world';
+// newParagraph.id = 'paragraph';
+// document.body.appendChild(newParagraph);
+// const paragraph = document.getElementById('paragraph')
+
+// const newBtn = document.createElement('button');
+// newBtn.textContent = 'click';
+// document.body.appendChild(newBtn);
+// const btn = document.getElementsByTagName('button')
+
+// newBtn.addEventListener ('click', makeOne)
+
+// function makeOne () {
+// paragraph.textContent = 'Привет';
+// }
+
+
+
+/////////////
+// const div = getElementById('qwerty');
+// const button = getElementById('btn');
+// button.addEventListener ('click', addInvisible)
+
+// function addBlack () {
+//         div.style.color = '#bbb';
+// } 
+
+// const div = document.getElementById('qwerty');
+//   const button = document.getElementById('btn');
+
+//   button.addEventListener('click', function() {
+//     div.classList.toggle('red');
+//   });         // менять цвет туда-назад
+
+////////////////
+// const image = document.getElementById('myImage');
+// const infoParagraph = document.getElementById('infoParagraph');
+// const imageUrl = image.getAttribute('src');
+// infoParagraph.textContent = imageUrl;
+
+
+///////////////
+//курсор наведен на элемент
+// const myDiv = document.getElementById('myDiv');
+// const bodyElement = document.body;
+// function start() {
+//     console.log('курсор наведен на элемент');
+// }
+// myDiv.addEventListener('mouseover', start)
+
+
+
+
+//////////////////////////////////////////////////////////////////////////
+
+
+
+// Задание 8
+// Есть массив ссылок:
+// let linksArr = ['https://www.amazon.com/', 'https://www.youtube.com/', 'https://devby.io/', 'https://www.google.com/', 'https://apple.com/'];
+
+// Вам нужно:
+// 1) при помощи JS создать DIV, задать ему css стили (фон, паддинги)
+// 2) при помощи цикла пройтись по массиву 'linksArr', для каждого из элементов массива сформировать ссылку (тег
+// c атрибутом href и текстом из массива) и добавить эту ссылку в созданный DIV из пункта 1
+// При нажатии на ссылки адреса должны открываться в новой вкладке (атрибут target="_blank")
+// 3) Добавить DIV из пункта 1 (со ссылками внутри ) в BODY
+
+// const newDiv = document.createElement('div');
+// newDiv.style.backgroundColor = 'lightgray';
+// newDiv.style.padding = '20px';
+
+// let linksArr = ['https://www.amazon.com/', 'https://www.youtube.com/', 'https://devby.io/', 'https://www.google.com/', 'https://apple.com/'];
+
+// linksArr.forEach(el => {
+//     const link = document.createElement('a');
+//     link.href = el;
+//     link.textContent = el;
+//     link.target = '_blank';
+//     newDiv.appendChild(link);
+//     const br = document.createElement('br');
+//     newDiv.appendChild(br);
+// });
+
+// document.body.appendChild(newDiv);
+
+//////////////////////////////////////////////////////////////////////////
+
+// Задание 9*
+// Есть массив объектов с полями name, age. Например:
+// const users = [
+// {name: 'Mark', age: 12},
+// {name: 'Olga', age: 30},
+// {name:'Tom', age: 25},
+// {name:'Den', age: 43}
+// ]
+// Создать в html таблицу (table).
+// C помощью js заполнить таблицу информацией из массива, в одной колонке будут имена, во второй возраст. 
+// Имена должны быть красного цвета, age - синего.
+// ПОДСКАЗКА, Таблица состоит из строк (tr) и ячеек (td) внутри этих строк. 
+// Строк должно создаваться столько, сколько объектов внутри массива, и их количество может быть любым.
+
+// const users = [
+//     {name: 'Mark', age: 12},
+//     {name: 'Olga', age: 30},
+//     {name:'Tom', age: 25},
+//     {name:'Den', age: 43}
+//     ];
+
+// const userTable = document.getElementById('userTable');
+
+// users.forEach(user => {
+//   const row = document.createElement('tr');
+
+//   const nameCell = document.createElement('td');
+//   nameCell.textContent = user.name;
+//   nameCell.classList.add('name'); 
+//   row.appendChild(nameCell);
+
+//   const ageCell = document.createElement('td');
+//   ageCell.textContent = user.age;
+//   ageCell.classList.add('age'); 
+//   row.appendChild(ageCell);
+
+//   userTable.appendChild(row);
+// });
+    
+//////////////////////////////////////////////////////////////////////////
+
+// Задание 10
+// Есть верстка: https://teenscool1.notion.site...
+// С помощью JavaScript:
+// 1) Найти в коде список ul и добавить ему класс “list”.
+// 2) На li через один (начиная с самого первого) установить класс “item”
+// 3) На все ссылки в примере установить класс “custom-link”
+
+// const ul = document.querySelector('ul');
+// ul.classList.add('list');
+
+// const li = document.querySelectorAll('li');
+// li.forEach((li, i) => {
+//     if(i % 2 === 0) {
+//         li.classList.add('item')
+//     }
+// })
+
+// const link = document.querySelectorAll('a');
+// link.forEach(link => {
+//     link.classList.add('custom-link');
+// })
