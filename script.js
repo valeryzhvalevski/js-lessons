@@ -52,10 +52,57 @@
 // 1) решить с помощью if
 // 2) решить с помощью evel (https://developer.mozilla.org/...)
 
+// const calculatorForm = document.getElementById('calculatorForm');
+// const resultDiv = document.getElementById('result');
+// calculatorForm.addEventListener('submit', function (e) {
+//     e.preventDefault();
 
+//     const num1 = Number(document.getElementById('num1').value);
+//     const num2 = Number(document.getElementById('num2').value);
+//     const operation = document.getElementById('operation').value;
+
+//     let result;
+
+//     if (operation === 'plus') {
+//       result = num1 + num2;
+//     } else if (operation === 'minus') {
+//       result = num1 - num2;
+//     } else if (operation === 'multiply') {
+//       result = num1 * num2;
+//     } else if (operation === 'divide') {
+//       result = num1 / num2;
+//     }
+
+//     resultDiv.textContent = `Результат: ${result}`;
+//   });
 
 // Задание 5
 // Вставить в разметку html тег button без js (просто предусмотреть в разметке). 
 // При наведении на кнопку изменять ее цвет каждый раз рандомным цветом. 
 // При выведении мышки за пределы кнопки поворачивать кнопку на рандомный угол от -180 до 180 градусов. 
 // Использовать обработку событий mouseenter, mouseleave на этой кнопке.
+function changeButtonColor() {
+    const button = document.querySelector('.random-color-button');
+    const randomColor = getRandomColor();
+    button.style.backgroundColor = randomColor;
+  }
+  
+  function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  function rotateButton() {
+    const button = document.querySelector('.random-color-button');
+    const randomRotation = getRandomRotation();
+    button.style.transform = `rotate(${randomRotation}deg)`;
+  }
+
+
+  function getRandomRotation() {
+    return Math.floor(Math.random() * 361) - 180;
+  }
