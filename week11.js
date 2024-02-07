@@ -61,11 +61,11 @@ document.querySelector(".b-3").onclick = makeThree;
 
 function makeFour() {
   //Ваш код
-  const div = document.getElementById('practicum4')
+  const div = document.getElementById("practicum4");
   const b4 = document.querySelector(".b-4");
-b4.addEventListener('click', function(){
-	div.style.backgroundColor = 'red';
-})
+  b4.addEventListener("click", function () {
+    div.style.backgroundColor = "red";
+  });
 }
 
 document.querySelector(".b-4").onclick = makeFour;
@@ -76,12 +76,19 @@ document.querySelector(".b-4").onclick = makeFour;
 
 function makeFive() {
   //Ваш код
+  const practicum5 = document.getElementById("practicum5");
+  const b5 = document.querySelector(".b-5");
+  b5.addEventListener("click", function () {
+    practicum5.value = "Новое значение";
+  });
 }
 
 document.querySelector(".b-5").onclick = makeFive;
 
 //Задание 6
-//Используйте метод getElementById, чтобы найти элемент <img>. При нажатии на кнопку измените его атрибут src на "newimage.jpg", а атрибут alt на "Новое изображение".
+//Используйте метод getElementById, чтобы найти элемент <img>.
+// При нажатии на кнопку измените его атрибут src на "newimage.jpg",
+// а атрибут alt на "Новое изображение".
 //Подсказка: Используйте знак равенства для изменения атрибутов элемента
 
 function makeSix() {
@@ -93,30 +100,50 @@ function makeSix() {
 document.querySelector(".b-6").onclick = makeSix;
 
 //Задание 7
-//Используйте метод querySelector, чтобы найти элемент <a>. При нажатии на кнопку измените его href на "https://www.google.com", а название ссылки на "Ссылка на Google".
-//Подсказка: Используйте знак равенства для изменения атрибутов элемента и метод для изменения текстового содержимого элемента
+//Используйте метод querySelector, чтобы найти элемент <a>.
+// При нажатии на кнопку измените его href на "https://www.google.com",
+// а название ссылки на "Ссылка на Google".
+//Подсказка: Используйте знак равенства для изменения атрибутов
+// элемента и метод для изменения текстового содержимого элемента
 
 function makeSeven() {
   //Ваш код
+  const practicum7 = document.getElementById("practicum7");
+  const b7 = document.querySelector(".b-7");
+  b7.addEventListener("click", function () {
+    practicum7.href = "https://www.google.com";
+    practicum7.textContent = "Ссылка на Google";
+  });
 }
 
 document.querySelector(".b-7").onclick = makeSeven;
 
 //Задание 8
-//Используйте метод getElementById, чтобы найти элемент <ul>. При нажатии на кнопку добавьте новый элемент <li> со значением "Новый элемент" в список.
-//Подсказка: Используйте метод createElement(), который используется для динамического изменения и взаимодействия с элементами веб-страницы, и метод append(item), который добавляет элемент в конец списка. Новый элемент становится последним элементом списка.
+//Используйте метод getElementById, чтобы найти элемент <ul>. 
+//При нажатии на кнопку добавьте новый элемент <li> со значением "Новый элемент" в список.
+//Подсказка: Используйте метод createElement(), который используется для 
+//динамического изменения и взаимодействия с элементами веб-страницы, и метод append(item), 
+//который добавляет элемент в конец списка. Новый элемент становится последним элементом списка.
 
 function makeEight() {
   //Найдите элемент x
   //Создайте новый пункт списка y
   //Добавьте значение в созданный пункт списка y
   //Добавьте в список х новый элемент y
+  const practicum8 = document.getElementById('practicum8');
+  const b8 = document.querySelector(".b-8");
+  b8.addEventListener('click', function(){
+	const li = document.createElement('li');
+	li.textContent = "Новый элемент";
+	practicum8.appendChild(li);
+  })
 }
 
 document.querySelector(".b-8").onclick = makeEight;
 
 //Задание 9
-//Используйте метод getElementById, чтобы найти элемент <select>. При нажатии на кнопку добавьте новый элемент <option> со значением "Новый вариант" в список.
+//Используйте метод getElementById, чтобы найти элемент <select>. 
+//При нажатии на кнопку добавьте новый элемент <option> со значением "Новый вариант" в список.
 //Подсказка: Используйте метод createElement(), который используется для динамического изменения и взаимодействия с элементами веб-страницы, и метод append(item), который добавляет элемент в конец списка. Новый элемент становится последним элементом списка.
 
 function makeNine() {
@@ -124,16 +151,30 @@ function makeNine() {
   //Создайте новый элемент
   //Добавьте текст в созданный эелемент
   //Добавьте новый элемент в выпадающий список
+  const practicum9 = document.getElementById('practicum9');
+  const b9 = document.querySelector(".b-9");
+  b9.addEventListener('click', function(){
+	const option = document.createElement('option');
+	option.textContent = "Новый вариант";
+	practicum9.appendChild(option);
+  })
+
 }
 
 document.querySelector(".b-9").onclick = makeNine;
 
 //Задание 10
-//Используйте метод getElementById, чтобы найти элемент <div>. При нажатии на кнопку измените его стиль на "display: none;", чтобы скрыть его.
+//Используйте метод getElementById, чтобы найти элемент <div>. 
+//При нажатии на кнопку измените его стиль на "display: none;", чтобы скрыть его.
 //Подсказка: Используйте свойство display для изменения стилей элемента
 
 function makeTen() {
   //Ваш код
+  const practicum10 = document.getElementById('practicum10');
+  const b10 = document.querySelector(".b-10");
+b10.addEventListener('click', function() {
+	practicum10.style.display = 'none';
+})
 }
 
 document.querySelector(".b-10").onclick = makeTen;
