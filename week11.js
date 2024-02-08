@@ -346,17 +346,27 @@ function makeTwenty() {
 document.querySelector(".b-20").onclick = makeTwenty;
 
 //Задание 21
-//Используйте метод getElementById, чтобы найти элемент <div>. При нажатии на кнопку добавьте в конец элемента <div> новый дочерний элемент <p> с текстом "Добавлено в конец".
+//Используйте метод getElementById, чтобы найти элемент <div>.
+// При нажатии на кнопку добавьте в конец элемента <div>
+// новый дочерний элемент <p> с текстом "Добавлено в конец".
 //Подсказка: Используйте метод append для добавления нового дочернего элемента в конец элемента <div>
 
 function makeTwentyOne() {
   //Ваш код
+  const practicum21 = document.getElementById("practicum21");
+  const b21 = document.querySelector(".b-21");
+  b21.addEventListener("click", function () {
+    const newP1 = document.createElement("p");
+    newP1.textContent = "Добавлено в конец";
+    practicum21.appendChild(newP1);
+  });
 }
 
 document.querySelector(".b-21").onclick = makeTwentyOne;
 
 //Задание 22
-//Используйте метод getElementById, чтобы найти элемент <img>. Выведите информацию на экран о наличии атрибута "src" у изображения.
+//Используйте метод getElementById, чтобы найти элемент <img>.
+// Выведите информацию на экран о наличии атрибута "src" у изображения.
 //Подсказка: Используйте метод hasAttribute для проверки наличия атрибута
 
 function makeTwentyTwo() {
@@ -364,6 +374,18 @@ function makeTwentyTwo() {
   //2 шаг: Создайте переменную, которая проверяет наличие атрибута у найденного элемента
   //3 шаг: Найдите элемент, в который нужно вставить значение
   //4 шаг: Добавьте в эелемент текстовое значение 2 шага. Например: переменная = 'Атрибут "src" присутствует: ' + название переменной из 2 шага;
+  const practicum22 = document.getElementById("practicum22");
+  const b22 = document.querySelector(".b-22");
+  const result22 = document.getElementById("result22");
+
+  b22.addEventListener("click", function () {
+    if (practicum22.hasAttribute("src")) {
+      result22.textContent =
+        'Изображение имеет атрибут "src".' + practicum22.src;
+    } else {
+      result22.textContent = 'Изображение не имеет атрибут "src".';
+    }
+  });
 }
 
 document.querySelector(".b-22").onclick = makeTwentyTwo;
@@ -374,6 +396,12 @@ document.querySelector(".b-22").onclick = makeTwentyTwo;
 
 function makeTwentyThree() {
   //Ваш код
+  const practicum23 = document.getElementById("practicum23");
+  const b23 = document.querySelector(".b-23");
+
+  b23.addEventListener("click", function () {
+    practicum23.removeAttribute("href");
+  });
 }
 
 document.querySelector(".b-23").onclick = makeTwentyThree;
@@ -384,6 +412,12 @@ document.querySelector(".b-23").onclick = makeTwentyThree;
 
 function makeTwentyFour() {
   //Ваш код
+  const practicum24 = document.getElementById("practicum24");
+  const b24 = document.querySelector(".b-24");
+
+  b24.addEventListener("click", function () {
+    practicum24.setAttribute("value", "Новое значение");
+  });
 }
 
 document.querySelector(".b-24").onclick = makeTwentyFour;
@@ -398,6 +432,14 @@ function makeTwentyFive() {
   //3 шаг: Запишите значение атрибута в переменную
   //4 шаг: Найдите элемент, в который нужно вставить значение из 3 шага
   //5 шаг: Добавьте в элемент 4 шага текстовое значение 3 шага. Например: переменная = 'Добавленный атрибут: ' + название переменной из 3 шага;
+  const practicum25 = document.getElementById("practicum25");
+  const b25 = document.querySelector(".b-25");
+
+  b25.addEventListener("click", function () {
+    practicum25.setAttribute("data-info", "Дополнительная информация");
+    const dataInfoValue = practicum25.getAttribute("data-info");
+    console.log("Добавленный атрибут: " + dataInfoValue);
+  });
 }
 
 document.querySelector(".b-25").onclick = makeTwentyFive;
@@ -410,13 +452,18 @@ const button = document.querySelector(".b-26");
 // const parent = Ваш код;
 
 const makeTwentySix = () => {
-  parent.style.backgroundColor = "red";
+  const parent = button.closest(".parent");
+  if (parent) {
+    parent.style.backgroundColor = "red";
+  }
 };
 
 document.querySelector(".b-26").onclick = makeTwentySix;
 
 //Задание 27
-//Используйте метод `getElementById`, чтобы найти элемент `<div>`. Проверьте, содержит ли данный элемент класс `highlight`. Выедите результат в <div> c id result.
+//Используйте метод `getElementById`, чтобы найти элемент `<div>`. 
+// Проверьте, содержит ли данный элемент класс `highlight`. 
+// Выедите результат в <div> c id result.
 //Подсказка: Используйте метод `contains` для проверки наличия класса у элемента. В <div> должен появиться результат true или false.
 
 function makeTwentySeven() {
@@ -424,6 +471,9 @@ function makeTwentySeven() {
   //Создайте переменную и сохраните в неё результат проверки метода contains. Например: const result = p.classList.contains('active');
   //Найдите переменную, в которую нужно вывести результат
   //Запишите результат в переменную
+  const practicum27 = document.getElementById("practicum27");
+  const containsHighlightClass = practicum27.classList.contains('highlight');
+  practicum27.textContent = containsHighlightClass ? 'true' : 'false';
 }
 
 document.querySelector(".b-27").onclick = makeTwentySeven;
@@ -438,24 +488,26 @@ function handleClick() {
   console.log("Кнопка нажата");
 }
 
+buttonTaskTwentyEight.addEventListener('click', handleClick);
 //Добавьте слушатель eventListener на кнопку buttonTaskTwentyEight
 
 //Задание 29
-//Используйте метод getElementById, чтобы найти элемент <input />. Добавьте обработчик события change, который будет выводить сообщение "Значение изменено" в консоль при изменении значения в поле ввода.
+//Используйте метод getElementById, чтобы найти элемент <input />. 
+//Добавьте обработчик события change, который будет выводить сообщение "Значение изменено" в консоль при изменении значения в поле ввода.
 //Подсказка: Используйте метод addEventListener для добавления обработчика события. Чтобы проверить работу слушателя, нужно напечатать один символ и более в поле ввода и убрать фокус с инпута, кликнув на любое место страницы.
-
+const input29 = document.getElementById("input29");
 function handleChange() {
   console.log("Значение изменено");
 }
-
+input29.addEventListener('change', handleChange);
 //Ваш код
 
 //Задание 30
 //Используйте метод getElementById, чтобы найти элемент <div>. Добавьте обработчик события `mouseover`, который будет выводить сообщение "Курсор наведен на элемент" в консоль при наведении курсора на элемент.
 //Подсказка: Используйте метод addEventListener для добавления обработчика события. Чтобы проверить работу слушателя, нужно напечатать один символ и более в поле ввода и убрать фокус с инпута, кликнув на любое место страницы.
-
+const div30 = document.getElementById("div30");
 function handleMouseOver() {
   console.log("Курсор наведен на элемент");
 }
-
+div30.addEventListener('mouseover', handleMouseOver);
 //Ваш код
