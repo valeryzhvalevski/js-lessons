@@ -119,10 +119,10 @@ function makeSeven() {
 document.querySelector(".b-7").onclick = makeSeven;
 
 //Задание 8
-//Используйте метод getElementById, чтобы найти элемент <ul>. 
+//Используйте метод getElementById, чтобы найти элемент <ul>.
 //При нажатии на кнопку добавьте новый элемент <li> со значением "Новый элемент" в список.
-//Подсказка: Используйте метод createElement(), который используется для 
-//динамического изменения и взаимодействия с элементами веб-страницы, и метод append(item), 
+//Подсказка: Используйте метод createElement(), который используется для
+//динамического изменения и взаимодействия с элементами веб-страницы, и метод append(item),
 //который добавляет элемент в конец списка. Новый элемент становится последним элементом списка.
 
 function makeEight() {
@@ -130,19 +130,19 @@ function makeEight() {
   //Создайте новый пункт списка y
   //Добавьте значение в созданный пункт списка y
   //Добавьте в список х новый элемент y
-  const practicum8 = document.getElementById('practicum8');
+  const practicum8 = document.getElementById("practicum8");
   const b8 = document.querySelector(".b-8");
-  b8.addEventListener('click', function(){
-	const li = document.createElement('li');
-	li.textContent = "Новый элемент";
-	practicum8.appendChild(li);
-  })
+  b8.addEventListener("click", function () {
+    const li = document.createElement("li");
+    li.textContent = "Новый элемент";
+    practicum8.appendChild(li);
+  });
 }
 
 document.querySelector(".b-8").onclick = makeEight;
 
 //Задание 9
-//Используйте метод getElementById, чтобы найти элемент <select>. 
+//Используйте метод getElementById, чтобы найти элемент <select>.
 //При нажатии на кнопку добавьте новый элемент <option> со значением "Новый вариант" в список.
 //Подсказка: Используйте метод createElement(), который используется для динамического изменения и взаимодействия с элементами веб-страницы, и метод append(item), который добавляет элемент в конец списка. Новый элемент становится последним элементом списка.
 
@@ -151,71 +151,90 @@ function makeNine() {
   //Создайте новый элемент
   //Добавьте текст в созданный эелемент
   //Добавьте новый элемент в выпадающий список
-  const practicum9 = document.getElementById('practicum9');
+  const practicum9 = document.getElementById("practicum9");
   const b9 = document.querySelector(".b-9");
-  b9.addEventListener('click', function(){
-	const option = document.createElement('option');
-	option.textContent = "Новый вариант";
-	practicum9.appendChild(option);
-  })
-
+  b9.addEventListener("click", function () {
+    const option = document.createElement("option");
+    option.textContent = "Новый вариант";
+    practicum9.appendChild(option);
+  });
 }
 
 document.querySelector(".b-9").onclick = makeNine;
 
 //Задание 10
-//Используйте метод getElementById, чтобы найти элемент <div>. 
+//Используйте метод getElementById, чтобы найти элемент <div>.
 //При нажатии на кнопку измените его стиль на "display: none;", чтобы скрыть его.
 //Подсказка: Используйте свойство display для изменения стилей элемента
 
 function makeTen() {
   //Ваш код
-  const practicum10 = document.getElementById('practicum10');
+  const practicum10 = document.getElementById("practicum10");
   const b10 = document.querySelector(".b-10");
-b10.addEventListener('click', function() {
-	practicum10.style.display = 'none';
-})
+  b10.addEventListener("click", function () {
+    practicum10.style.display = "none";
+  });
 }
 
 document.querySelector(".b-10").onclick = makeTen;
 
 //Задание 11
-//Используйте метод getElementById, чтобы найти элемент <div>. При нажатии на кнопку измените его ширину на 400px и высоту на 200px.
+//Используйте метод getElementById, чтобы найти элемент <div>.
+//При нажатии на кнопку измените его ширину на 400px и высоту на 200px.
 //Подсказка: Используйте свойство style для изменения стилей элемента
 
 function makeEleven() {
   //Ваш код
+  const practicum11 = document.getElementById("practicum11");
+  const b11 = document.querySelector(".b-11");
+  b11.addEventListener("click", function () {
+    practicum11.style.width = "400px";
+    practicum11.style.height = "200px";
+  });
 }
 
 document.querySelector(".b-11").onclick = makeEleven;
 
 //Задание 12
-//Используйте метод querySelector, чтобы найти элемент <div>. При клике на этот элемент измените его ширину на 400px и высоту на 200px. При повторном клике верните его размеры в исходное состояние.
+//Используйте метод querySelector, чтобы найти элемент <div>.
+// При клике на этот элемент измените его ширину на 400px и высоту на 200px.
+// При повторном клике верните его размеры в исходное состояние.
 //Подсказка: Используйте метод toggle() для добавления/удаления класса, который изменяет размеры элемента
 
 function makeTwelve() {
   //Ваш код
+  const practicum12 = document.getElementById("practicum12");
+  practicum12.addEventListener("click", function () {
+    practicum12.classList.toggle("large");
+  });
 }
 
 //Задание 13
-//Используйте метод `getElementsByTagName`, чтобы найти первый элемент <ol>. Затем измените его текст на "Первый!".
+//Используйте метод `getElementsByTagName`, чтобы найти первый элемент <ol>.
+// Затем измените его текст на "Первый!".
 //Подсказка: Используйте метод для изменения текстового содержимого элемента
 
 function makeThirteen() {
   //Ваш код
+  const firstOl = document.getElementsByTagName("ol")[0];
+  firstOl.textContent = "Первый!";
 }
 
 document.querySelector(".b-13").onclick = makeThirteen;
 
 //Задание 14
-//Используйте метод querySelectorAll, чтобы найти все элементы <p> на странице. Затем измените их текст на "Огого, что могу!".
-//Метод forEach является методом массивов в JavaScript. Он выполняет указанную функцию один раз для каждого элемента в массиве. С этим методом мы познакомимся на следующей неделе.
+//Используйте метод querySelectorAll, чтобы найти все элементы <p> на странице.
+//Затем измените их текст на "Огого, что могу!".
+//Метод forEach является методом массивов в JavaScript.
+//Он выполняет указанную функцию один раз для каждого элемента в массиве. С этим методом мы познакомимся на следующей неделе.
 
 function makeFourteen() {
   //Найдите все элементы <p>
   //const paragraphs = ваш код;
+  const paragraphs = document.querySelectorAll("p");
   paragraphs.forEach(function (paragraph) {
     //Измените их текстовое содержимое у paragraph
+    paragraph.textContent = "Огого, что могу!";
   });
 }
 
@@ -224,61 +243,104 @@ document.querySelector(".b-14").onclick = makeFourteen;
 //Если задание выполнено верно, то вы увидите, что все элементы <p> на странице, в том числе и задния, изменили свои значения.  Чтобы вернуть всё, как было до выполнения задания, перезагрузите страницу.
 
 //Задание 15
-//Используйте метод getElementById, чтобы найти элемент <div>. При нажатии на кнопку удалите у него класс "practicum15".
+//Используйте метод getElementById, чтобы найти элемент <div>.
+//При нажатии на кнопку удалите у него класс "practicum15".
 //Подсказка: Используйте метод remove для удаления класса элемента
 
 function makeFifteen() {
   //Ваш код
+  const practicum15 = document.getElementById("practicum15");
+  const b15 = document.querySelector(".b-15");
+  b15.addEventListener("click", function () {
+    practicum15.classList.remove("practicum15");
+  });
 }
 
 document.querySelector(".b-15").onclick = makeFifteen;
 
 //Задание 16
-//Используйте метод getElementById, чтобы найти элемент <div>. При нажатии на кнопку добавьте ему класс "practicum16".
+//Используйте метод getElementById, чтобы найти элемент <div>.
+// При нажатии на кнопку добавьте ему класс "practicum16".
 //Подсказка: Используйте метод add для добавления класса элемента
 
 function makeSixteen() {
   //Ваш код
+  const practicum16 = document.getElementById("practicum16");
+  const b16 = document.querySelector(".b-16");
+  b16.addEventListener("click", function () {
+    practicum16.classList.add("practicum16");
+  });
 }
 
 document.querySelector(".b-16").onclick = makeSixteen;
 
 //Задание 17
-//Используйте метод getElementById, чтобы найти элемент <div>. При нажатии на кнопку переключите у него класс "color", который изменяет его фоновый цвет. Если класс уже присутствует, удалите его, иначе добавьте.
+//Используйте метод getElementById, чтобы найти элемент <div>.
+// При нажатии на кнопку переключите у него класс "color",
+// который изменяет его фоновый цвет. Если класс уже присутствует,
+// удалите его, иначе добавьте.
 //Подсказка: Используйте метод toggle класса элемента
 
 function makeSeventeen() {
   //Ваш код
+  const practicum17 = document.getElementById("practicum17");
+  const b17 = document.querySelector(".b-17");
+  b17.addEventListener("click", function () {
+    practicum17.classList.toggle("color");
+  });
 }
 
 document.querySelector(".b-17").onclick = makeSeventeen;
 
 //Задание 18
-//Используйте метод getElementById, чтобы найти элемент <div>. При нажатии на кнопку добавьте ему класс "active", который изменит его стиль, например, изменит цвет текста. При повторном нажатии удалите класс "active".
+//Используйте метод getElementById, чтобы найти элемент <div>.
+// При нажатии на кнопку добавьте ему класс "active", который изменит его стиль,
+// например, изменит цвет текста. При повторном нажатии удалите класс "active".
 //Подсказка: Используйте метод toggle класса элемента
 
 function makeEighteen() {
   //Ваш код
+  const practicum18 = document.getElementById("practicum18");
+  const b18 = document.querySelector(".b-18");
+  b18.addEventListener("click", function () {
+    practicum18.classList.toggle("active");
+  });
 }
 
 document.querySelector(".b-18").onclick = makeEighteen;
 
 //Задание 19
-//Используйте метод getElementById, чтобы найти элемент <div>. При нажатии на кнопку удалите у него класс "active", который изменяет его стиль, например, изменяет цвет текста.
+//Используйте метод getElementById, чтобы найти элемент <div>.
+//  При нажатии на кнопку удалите у него класс "active",
+//  который изменяет его стиль, например, изменяет цвет текста.
 //Подсказка: Используйте метод remove класса элемента
 
 function makeNineteen() {
   //Ваш код
+  const practicum19 = document.getElementById("practicum19");
+  const b19 = document.querySelector(".b-19");
+  b19.addEventListener("click", function () {
+    practicum19.classList.remove("active");
+  });
 }
 
 document.querySelector(".b-19").onclick = makeNineteen;
 
 //Задание 20
-//Используйте метод getElementById, чтобы найти элемент <div>. При нажатии на кнопку добавьте в начало элемента <div> новый дочерний элемент <p> с текстом "Добавлено в начало".
+//Используйте метод getElementById, чтобы найти элемент <div>.
+// При нажатии на кнопку добавьте в начало элемента <div>
+// новый дочерний элемент <p> с текстом "Добавлено в начало".
 //Подсказка: Используйте метод prepend для добавления нового дочернего элемента в начало элемента <div>
 
 function makeTwenty() {
   //Ваш код
+  const practicum20 = document.getElementById("practicum20");
+  const b20 = document.querySelector(".b-20");
+  b20.addEventListener("click", function () {
+    const newP = document.createElement("p");
+    newP.textContent = "Добавлено в начало";
+    practicum20.prepend(newP);
+  });
 }
 
 document.querySelector(".b-20").onclick = makeTwenty;
